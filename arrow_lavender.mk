@@ -26,6 +26,14 @@ $(call inherit-product, device/xiaomi/lavender/device.mk)
 
 # Inherit some common Arrow stuff
 $(call inherit-product, vendor/arrow/config/common.mk)
+DEVICE_MAINTAINER := @Ritikk0011
+ARROW_BUILD_TYPE := UNOFFICIAL
+ARROW_GAPPS := true
+TARGET_FACE_UNLOCK_SUPPORTED := true
+TARGET_BOOT_ANIMATION_RES := 1080
+TARGET_SUPPORTS_QUICK_TAP := true
+SYSTEM_OPTIMIZE_JAVA := true
+SYSTEMUI_OPTIMIZE_JAVA := true
 
 # Device identifier
 PRODUCT_NAME := arrow_lavender
@@ -36,3 +44,7 @@ PRODUCT_BRAND := Xiaomi
 PRODUCT_MODEL := Redmi Note 7
 
 TARGET_VENDOR_PRODUCT_NAME := lavender
+PRODUCT_SYSTEM_PROPERTIES += \
+     ro.device.chipset=SDM660 \
+     ro.device.display_resolution=2340x1080
+
